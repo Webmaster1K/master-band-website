@@ -1,0 +1,401 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(90, 0, 0, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(90, 0, 0, 0.1) 0%, transparent 20%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a0a0a 100%);
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 3px solid #8b0000;
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3);
+}
+
+h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    letter-spacing: 1px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav ul, main ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li, main li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+nav a:hover {
+    color: #ff0000;
+    border-bottom: 2px solid #ff0000;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+}
+
+main {
+    padding: 40px 20px;
+    background-color: #111;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 6vh 0;
+    padding: 30px;
+    background-color: rgba(26, 26, 26, 0.8);
+    border-radius: 8px;
+    border-left: 4px solid #8b0000;
+    box-sizing: border-box;
+}
+
+section div {
+    width: 100%;
+    line-height: 1.6;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+section div h1 {
+    text-align: center;
+    margin-bottom: 5vh;
+    color: #fff;
+    font-size: 2.2em;
+    word-wrap: break-word;
+}
+
+h2, h3 {
+    color: #cc0000;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    word-wrap: break-word;
+}
+
+.band-members {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+}
+
+.band-members li {
+    margin: 0;
+    flex: 0 1 calc(33.333% - 40px);
+    min-width: 280px;
+    background: linear-gradient(145deg, #1a1a1a, #2a1a1a);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #333;
+    box-sizing: border-box;
+}
+
+.band-members li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(139, 0, 0, 0.3);
+    border-color: #8b0000;
+}
+
+.band-members div {
+    text-align: center;
+}
+
+.band-members img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #8b0000;
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.4);
+}
+
+.band-members p {
+    margin: 8px 0;
+    color: #e0e0e0;
+    word-wrap: break-word;
+}
+
+.band-members p:first-of-type {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.band-members p:nth-of-type(2) {
+    color: #cc0000;
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a0a0a 100%);
+    border-top: 3px solid #8b0000;
+    color: #aaa;
+    font-size: 0.9em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1440px) {
+    main {
+        padding: 35px 20px;
+    }
+    
+    .band-members li {
+        flex: 0 1 calc(33.333% - 30px);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 2.2em;
+    }
+    
+    section div h1 {
+        font-size: 2em;
+    }
+    
+    .band-members li {
+        flex: 0 1 calc(50% - 30px);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    nav li {
+        margin: 0 15px;
+    }
+    
+    nav a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+    
+    main {
+        padding: 30px 15px;
+    }
+    
+    section {
+        padding: 25px 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav li {
+        margin: 5px 10px;
+        display: inline-block;
+    }
+    
+    nav a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    
+    main {
+        padding: 20px 10px;
+    }
+    
+    section {
+        padding: 20px 15px;
+        margin: 0 0 4vh 0;
+    }
+    
+    section div h1 {
+        font-size: 1.6em;
+        margin-bottom: 3vh;
+    }
+    
+    .band-members {
+        gap: 15px;
+    }
+    
+    .band-members li {
+        flex: 0 1 100%;
+        max-width: 350px;
+        min-width: 250px;
+    }
+    
+    .band-members img {
+        max-width: 180px;
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.6em;
+    }
+    
+    nav li {
+        margin: 3px 8px;
+    }
+    
+    nav a {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+    
+    section {
+        padding: 15px 10px;
+    }
+    
+    section div h1 {
+        font-size: 1.4em;
+    }
+    
+    .band-members li {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px 0;
+    }
+    
+    h1 {
+        font-size: 1.4em;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 3px 0;
+        display: block;
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    nav a {
+        font-size: 14px;
+        padding: 8px 0;
+        text-align: center;
+    }
+    
+    main {
+        padding: 15px 5px;
+    }
+    
+    section {
+        padding: 15px 8px;
+    }
+    
+    section div h1 {
+        font-size: 1.3em;
+    }
+    
+    .band-members img {
+        max-width: 150px;
+        height: 150px;
+    }
+    
+    .band-members li {
+        padding: 12px;
+    }
+    
+    footer {
+        padding: 15px 0;
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 1.2em;
+    }
+    
+    section div h1 {
+        font-size: 1.1em;
+    }
+    
+    .band-members img {
+        max-width: 130px;
+        height: 130px;
+    }
+    
+    .band-members p {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (min-height: 1000px) and (max-width: 768px) {
+    body {
+        justify-content: flex-start;
+    }
+    
+    main {
+        padding: 40px 20px;
+    }
+}
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    header {
+        padding: 10px 0;
+    }
+    
+    nav li {
+        margin: 2px 8px;
+    }
+    
+    main {
+        padding: 20px 15px;
+    }
+}
