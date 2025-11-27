@@ -263,7 +263,7 @@
     
     function isIndexPage() {
         const currentPath = window.location.pathname;
-        return currentPath.endsWith('index.php') || currentPath.endsWith('/');
+        return currentPath.endsWith('/index.php') || currentPath.endsWith('/') || currentPath.endsWith('index.php');
     }
     
     function generateNavHTML() {
@@ -381,4 +381,5 @@
         init: initNavigation,
         initMobileMenu: initMobileMenu
     };
+
 })();
