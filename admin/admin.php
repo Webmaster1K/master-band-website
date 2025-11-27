@@ -233,7 +233,7 @@ $active_section = $_GET['section'] ?? 'products';
                     </div>
                     <div style="display: flex; justify-content: space-between;">
                         <button type="submit" name="login" class="btn">Войти</button>
-                        <a href="../index.php" class="btn btn-secondary" style="padding: 11px 30px;">На главную</a>
+                        <a href="../" class="btn btn-secondary" style="padding: 11px 30px;">На главную</a>
                     </div>
                 </form>
             </div>
@@ -585,4 +585,5 @@ $active_section = $_GET['section'] ?? 'products';
         });
     </script>
 </body>
+
 </html>
