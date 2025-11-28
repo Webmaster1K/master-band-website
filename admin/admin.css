@@ -974,7 +974,6 @@ footer {
     justify-content: center;
 }
 
-/* Горизонтальные изображения - на всю ширину */
 .product-image.horizontal-image {
     height: 200px;
 }
@@ -985,10 +984,9 @@ footer {
     object-fit: cover;
 }
 
-/* Вертикальные изображения - с ограничением по ширине */
 .product-image.vertical-image {
-    height: 250px; /* Немного больше для вертикальных */
-    padding: 0 20px; /* Отступы по бокам */
+    height: 250px;
+    padding: 0 20px;
 }
 
 .product-image.vertical-image img {
@@ -998,7 +996,6 @@ footer {
     object-fit: contain;
 }
 
-/* Адаптивность для мобильных устройств */
 @media screen and (max-width: 768px) {
     .product-image.horizontal-image {
         height: 180px;
@@ -1019,4 +1016,5 @@ footer {
         height: 200px;
         padding: 0 10px;
     }
+
 }
