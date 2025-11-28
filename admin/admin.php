@@ -470,7 +470,6 @@ $active_section = $_GET['section'] ?? 'products';
             const productImages = document.querySelectorAll('.product-image img');
             
             productImages.forEach(img => {
-                // Создаем новое изображение для определения размеров
                 const testImage = new Image();
                 testImage.src = img.src;
                 
@@ -486,17 +485,14 @@ $active_section = $_GET['section'] ?? 'products';
                 };
                 
                 testImage.onerror = function() {
-                    // Если изображение не загружается, считаем его горизонтальным
                     const container = img.closest('.product-image');
                     container.classList.add('horizontal-image');
                 };
             });
         }
 
-        // Вызываем при загрузке DOM
         document.addEventListener('DOMContentLoaded', initImageOrientation);
 
-        // Также вызываем при загрузке каждого изображения на случай динамической загрузки
         document.addEventListener('load', function(e) {
             if (e.target.tagName === 'IMG' && e.target.closest('.product-image')) {
                 const img = e.target;
@@ -632,4 +628,5 @@ $active_section = $_GET['section'] ?? 'products';
     </script>
     <script src="../navigation.js"></script>
 </body>
+
 </html>
